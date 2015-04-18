@@ -31,10 +31,10 @@ import org.openjdk.jmh.annotations.State;
  * @author ben.manes@gmail.com (Ben Manes)
  */
 @State(Scope.Group)
-public class EliminationStackBenchmark {
-  @Param({"EliminationStack", "ConcurrentLinkedQueue", "ArrayBlockingQueue",
-    "LinkedBlockingQueueBenchmark", "LinkedTransferQueue", "SynchronousQueue",
-    "SynchronizedArrayDeque"})
+public class ConcurrentLinkedStackBenchmark {
+  @Param({"ConcurrentLinkedStack_optimistic", "ConcurrentLinkedStack_linearizable",
+      "ConcurrentLinkedQueue", "ArrayBlockingQueue", "LinkedBlockingQueueBenchmark",
+      "LinkedTransferQueue", "SynchronousQueue", "SynchronizedArrayDeque"})
   QueueType queueType;
 
   Queue<Boolean> queue;
